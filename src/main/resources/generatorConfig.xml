@@ -19,13 +19,13 @@
             <property name="dateFormat" value="yyyy-MM-dd HH:mm:ss"/>
         </commentGenerator>
         <!-- 连接数据库 -->
-        <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@192.168.29.134:1521:orcl" userId="pf" password="1" />
+        <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@192.168.29.134:1521:orcl" userId="plf" password="1" />
         <!-- 数值类型数据是否全部使用BigDecimal类型 -->
         <javaTypeResolver type="com.sunfong.plf.util.mybaits.MapperTypeResolver">
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
         <!-- 生成entity类 -->
-        <javaModelGenerator targetPackage="com.sunfong.plf.dob" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.sunfong.plf.dob.entity" targetProject="src/main/java">
             <property name="enableSubPackages" value="false" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
@@ -39,7 +39,7 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
         <!-- 需要生产po类的表 -->
-        <table  tableName="PF_MENU" domainObjectName="PfMenuDTO" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        <table  tableName="PLF_USER" domainObjectName="PlfUser" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
             <!-- 主键生成方式 -->
             <!--<generatedKey column="source_id" sqlStatement="select seq_t_user.nextval from dual" identity="true" />-->
             <!-- 列名去除前缀 -->

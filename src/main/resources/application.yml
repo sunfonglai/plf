@@ -2,7 +2,7 @@ spring:
   #oracle
   datasource:
     url: jdbc:oracle:thin:@192.168.29.134:1521:orcl
-    username: pf
+    username: plf
     password: 1
     driver-class-name: oracle.jdbc.driver.OracleDriver
   thymeleaf:
@@ -10,16 +10,13 @@ spring:
 
 
 mybatis:
-#mybatis扫描配置文件的路径
+#mybatis
   mapper-locations: classpath:static/plf/mapper/*.xml
 
 server:
-#对外提供服务的端口
-  port: 8080
+  port: 8000
 
-#日志
 logging:
-#日志等级
   level:
      com.sunfong.plf : debug
 
