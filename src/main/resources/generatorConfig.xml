@@ -21,21 +21,21 @@
         <!-- 连接数据库 -->
         <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@192.168.29.134:1521:orcl" userId="pf" password="1" />
         <!-- 数值类型数据是否全部使用BigDecimal类型 -->
-        <javaTypeResolver type="com.sunfong.pf.util.mapper.MapperTypeResolver">
+        <javaTypeResolver type="com.sunfong.plf.util.mybaits.MapperTypeResolver">
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
-        <!-- 生成po类 -->
-        <javaModelGenerator targetPackage="com.sunfong.pf.model" targetProject="src/main/java">
+        <!-- 生成entity类 -->
+        <javaModelGenerator targetPackage="com.sunfong.plf.dob" targetProject="src/main/java">
             <property name="enableSubPackages" value="false" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
         <!-- 生成xml映射文件 -->
-        <sqlMapGenerator targetPackage="static.pf.mapper" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="static.plf.mapper" targetProject="src/main/resources">
             <property name="enableSubPackages" value="false" />
             <property name="isMergeable" value="false" />
         </sqlMapGenerator>
         <!-- 生成dao类 -->
-        <javaClientGenerator targetPackage="com.sunfong.pf.mapper" targetProject="src/main/java" type="XMLMAPPER">
+        <javaClientGenerator targetPackage="com.sunfong.plf.mapper" targetProject="src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
         <!-- 需要生产po类的表 -->
