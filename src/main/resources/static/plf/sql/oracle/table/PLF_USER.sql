@@ -47,3 +47,8 @@ alter table PLF_USER
     minextents 1
     maxextents unlimited
   );
+
+--测试数据
+insert into PLF_USER (ID, USER_CODE, USER_NAME, USER_PSW, TELEPHONE, EMAIL)
+values ('1', 'sa', 'sa', '1', '1          ', '1');
+
