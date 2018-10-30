@@ -11,7 +11,7 @@ public class PlfApplicationTests {
 
     @Test
     public void contextLoads() {
-        System.out.println("ceshi git");
+        System.out.println("继续测试，提交idea版git提交");
     }
 
 }
