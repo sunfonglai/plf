@@ -11,7 +11,7 @@ public class PlfApplicationTests {
 
     @Test
     public void contextLoads() {
-        System.out.println("继续测试，提交idea版git提交");
+        System.out.println("lixf测试是否可以修改，提交idea版git提交");
     }
 
 }
