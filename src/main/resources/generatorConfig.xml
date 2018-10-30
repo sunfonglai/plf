@@ -39,7 +39,7 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
         <!-- 需要生产po类的表 -->
-        <table  tableName="PLF_USER" domainObjectName="PlfUser" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        <table  tableName="PLF_MENU" domainObjectName="PlfMenu" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
             <!-- 主键生成方式 -->
             <!--<generatedKey column="source_id" sqlStatement="select seq_t_user.nextval from dual" identity="true" />-->
             <!-- 列名去除前缀 -->

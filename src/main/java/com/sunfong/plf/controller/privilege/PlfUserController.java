@@ -20,6 +20,10 @@ public class PlfUserController {
     @Autowired
     IPlfUserService iPlfUserService;
 
+
+    /**
+     * @return
+     */
     @RequestMapping(value = "/getUser") //value一般与方法名一致
     public String getUser(){
         return iPlfUserService.getUserByMap(new HashMap()).toString();
