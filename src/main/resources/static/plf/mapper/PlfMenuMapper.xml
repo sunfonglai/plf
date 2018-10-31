@@ -197,5 +197,6 @@
     from PLF_MENU
     where 1=1
     <!--<if test="roleId!='' and roleId != null"> and  USER_CODE= #{userCode,jdbcType=VARCHAR}</if>-->
+    order by MOUDLE_DISPLAY_IDX,ORDER_IDX
   </select>
 </mapper>
