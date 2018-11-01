@@ -11,7 +11,7 @@ spring:
 
 mybatis:
 #mybatis
-  mapper-locations: classpath:static/plf/mapper/*.xml
+  mapper-locations: classpath:static/plf/mapper/*/*.xml
 
 server:
   port: 8000

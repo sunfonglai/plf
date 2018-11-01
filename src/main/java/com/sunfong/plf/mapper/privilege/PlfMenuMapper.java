@@ -1,6 +1,6 @@
-package com.sunfong.plf.mapper;
+package com.sunfong.plf.mapper.privilege;
 
-import com.sunfong.plf.dob.entity.PlfMenu;
+import com.sunfong.plf.dob.entity.privilege.PlfMenu;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

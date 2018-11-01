@@ -1,12 +1,11 @@
-package com.sunfong.plf.service.impl;
+package com.sunfong.plf.service.impl.privilege;
 
-import com.sunfong.plf.mapper.PlfMenuMapper;
-import com.sunfong.plf.service.itf.IPlfMenuService;
+import com.sunfong.plf.mapper.privilege.PlfMenuMapper;
+import com.sunfong.plf.service.itf.privilege.IPlfMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -23,8 +22,7 @@ public class PlfMenuServiceImpl implements IPlfMenuService {
     public List getMenuByRoleId(String roleId) {
         List menuList = plfMenuMapper.selectByRoleId(roleId);
         //再逆向排序
-        List treeList = tranfromMenuToTree(menuList);
-//        Collections.reverse( tranfromMenuToTree(treeList));
+        List treeList = transMenuToTree(menuList);
         return treeList;
     }
 
@@ -33,7 +31,7 @@ public class PlfMenuServiceImpl implements IPlfMenuService {
      * @param menuList
      * @return 返回树形List 树为3层List结构
      */
-    private List tranfromMenuToTree(List menuList){
+    private List transMenuToTree(List menuList){
         List treeList = new ArrayList();
 //      逆向排序后倒插
         List level2List = new ArrayList();

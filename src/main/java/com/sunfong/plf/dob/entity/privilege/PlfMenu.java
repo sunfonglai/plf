@@ -1,4 +1,4 @@
-package com.sunfong.plf.dob.entity;
+package com.sunfong.plf.dob.entity.privilege;
 
 import java.io.Serializable;
 

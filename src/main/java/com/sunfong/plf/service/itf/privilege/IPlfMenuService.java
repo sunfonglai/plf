@@ -1,4 +1,4 @@
-package com.sunfong.plf.service.itf;
+package com.sunfong.plf.service.itf.privilege;
 
 
 import java.util.List;
