@@ -81,3 +81,21 @@ values ('gsfgs56456213213', '900001', '数据处理', null, 'dc', '2', 'N', 'gsf
 
 insert into plf_menu (ID, MENU_CODE, MENU_NAME, URL, MOUDLE_ID, MENU_LEVEL, IS_LEAF, PARENT_ID, ORDER_IDX, MOUDLE_DISPLAY_IDX)
 values ('gsfgs56456213213213123', '900001001', '数据同步', null, 'dc', '3', 'Y', 'gsfgs56456213213', '101', '90');
+
+--修改表结构
+-- Add/modify columns
+alter table PLF_MENU add page_id VARCHAR2(42);
+-- Add comments to the columns
+comment on column PLF_MENU.page_id
+  is '页面的ID';
+
+--修改表结构
+alter table PLF_MENU add icon_id VARCHAR2(42);
+alter table PLF_MENU add path VARCHAR2(100);
+-- Add comments to the columns
+comment on column PLF_MENU.icon_id
+  is '图标类型';
+comment on column PLF_MENU.path
+  is '访问路径';
+
+
