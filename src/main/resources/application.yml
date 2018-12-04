@@ -7,6 +7,27 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
   thymeleaf:
     cache: false
+  #注册中心
+  application:
+    name: plf
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        register: true
+        hostname: 127.0.0.1
+        serviceName: ${spring.application.name}
+        port: ${server.port}
+        healthCheckPath: /data/plf/check/alive
+        healthCheckInterval: 15s
+        tags: urlprefix-/${spring.application.name}
+        instanceId: ${spring.application.name}
+
+
+
+
+
 
 
 mybatis:
@@ -19,6 +40,7 @@ mybatis:
 server:
   port: 8000
 
+#日志功能
 logging:
   level:
      com.sunfong.plf : debug
