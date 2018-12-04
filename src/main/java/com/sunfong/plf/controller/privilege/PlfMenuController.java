@@ -26,4 +26,9 @@ public class PlfMenuController {
     public List getMenuByRoleId(Map sessionParams){
         return iPlfMenuService.getMenuByRoleId("1");
     }
+
+    @RequestMapping(value = "/getMenuTreeByRoleId")
+    public List getMenuTreeByRoleId(Map sessionParams){
+        return iPlfMenuService.getMenuTreeByRoleId("1");
+    }
 }

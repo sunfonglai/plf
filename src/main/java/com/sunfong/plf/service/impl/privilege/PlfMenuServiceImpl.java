@@ -26,6 +26,14 @@ public class PlfMenuServiceImpl implements IPlfMenuService {
         return treeList;
     }
 
+    @Override
+    public List getMenuTreeByRoleId(String roleId) {
+        List menuList = plfMenuMapper.selectTreeByRoleId(roleId);
+        //转义
+        List treeList = transMenuToTree(menuList);
+        return treeList;
+    }
+
     /**
      * 将列表状的数据改为树形结构
      * @param menuList
@@ -38,17 +46,17 @@ public class PlfMenuServiceImpl implements IPlfMenuService {
         List level3List = new ArrayList();
         for (int i = 0; i < menuList.size() ; i++) {
             Map menu = (Map)menuList.get(i);
-            String menuLevel = menu.get("MENU_LEVEL").toString();
+            String menuLevel = menu.get("menuLevel").toString();
             if ("3".equals(menuLevel)){
                 level3List.add(menu);
             }
             if ("2".equals(menuLevel)){
-                menu.put("CHILD_LIST",level3List);
+                menu.put("children",level3List);
                 level2List.add(menu);
                 level3List = new ArrayList();
             }
             if ("1".equals(menuLevel)){
-                menu.put("CHILD_LIST",level2List);
+                menu.put("children",level2List);
                 treeList.add(menu);
                 level2List = new ArrayList();
             }

@@ -14,4 +14,11 @@ public interface IPlfMenuService {
      * @return
      */
     List getMenuByRoleId(String roleId);
+
+    /**
+     *
+     * @param roleId 输入role获得可以操作的菜单列表
+     * @return
+     */
+    List getMenuTreeByRoleId(String roleId);
 }
